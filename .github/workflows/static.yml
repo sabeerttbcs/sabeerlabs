@@ -28,7 +28,8 @@ jobs:
         run: |
           test -f public/index.html
           test -f public/.nojekyll
-          test "$(find public -type f | wc -l)" -eq 62
+          test -f public/assets/seo-ai-optimizer-logo.jpg
+          test "$(find public -type f | wc -l)" -eq 63
           test "$(find public -type f -name '*.html' | wc -l)" -eq 37
           test ! -e public/review
           test ! -e public/private-review
