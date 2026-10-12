@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://sabeerttbcs.github.io/sabeerlabs/sitemap.xml
+Disallow: /
