@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://sabeerttbcs.github.io/sabeerlabs/sitemap.xml
+Sitemap: https://sabeerlabs.com/sitemap.xml
