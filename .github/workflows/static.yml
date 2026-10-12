@@ -1,0 +1,55 @@
+
+name: Deploy Sabeer Digital Labs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website files
+        uses: actions/checkout@v6
+        with:
+          ref: website-public
+          persist-credentials: false
+
+      - name: Verify website payload
+        shell: bash
+        run: |
+          test -f public/index.html
+          test -f public/.nojekyll
+          test "$(find public -type f | wc -l)" -eq 62
+          test "$(find public -type f -name '*.html' | wc -l)" -eq 37
+          test ! -e public/review
+          test ! -e public/private-review
+          test ! -e public/OPEN-FIRST.html
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+          include-hidden-files: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
