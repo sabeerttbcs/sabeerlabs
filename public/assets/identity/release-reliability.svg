@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+<title id="title">Release and Reliability generic portfolio illustration</title><desc id="desc">A branching release path and verification check inside a rounded frame. Generic portfolio illustration.</desc>
+<rect x="8" y="8" width="144" height="144" rx="36" fill="#10232b" stroke="#79dfc1" stroke-width="2"/>
+<path d="M49 45v70m0-40c0 25 54 4 54 27V57" fill="none" stroke="#79dfc1" stroke-width="6" stroke-linecap="round"/>
+<circle cx="49" cy="43" r="10" fill="#10232b" stroke="#79dfc1" stroke-width="5"/>
+<circle cx="49" cy="116" r="10" fill="#10232b" stroke="#79dfc1" stroke-width="5"/>
+<circle cx="104" cy="53" r="20" fill="#d9bd86"/>
+<path d="m95 53 6 6 12-13" fill="none" stroke="#10232b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

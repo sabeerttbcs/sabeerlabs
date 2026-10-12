@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="45 18 220 230" width="512" height="512">
+  <defs>
+    <!-- Modern Vibrant Pink Gradient -->
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2E93" />
+      <stop offset="50%" stop-color="#FF007F" />
+      <stop offset="100%" stop-color="#D80064" />
+    </linearGradient>
+
+    <!-- Deep Tech Glow -->
+    <linearGradient id="shieldDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E0D1B" />
+      <stop offset="100%" stop-color="#0F060D" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#FF007F" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- ICON SECTION -->
+  <g transform="translate(30, 20)">
+    <!-- Outer Shield Border -->
+    <path d="M 110,10 
+             L 190,45 
+             C 190,130 145,185 110,210 
+             C 75,185 30,130 30,45 
+             Z" 
+          fill="url(#shieldDark)" 
+          stroke="url(#pinkGrad)" 
+          stroke-width="5" 
+          filter="url(#glow)" />
+
+    <!-- Inner Shield Accent Line -->
+    <path d="M 110,24 
+             L 176,52 
+             C 176,122 138,168 110,192 
+             C 82,168 44,122 44,52 
+             Z" 
+          fill="none" 
+          stroke="#FF69B4" 
+          stroke-width="1.5" 
+          opacity="0.4" />
+
+    <!-- Smart Security CCTV Camera Silhouette -->
+    <g transform="translate(110, 85)">
+      <!-- Camera Body -->
+      <path d="M -32,-20 L 15,-28 L 22,-8 L -25,0 Z" fill="#FFFFFF" />
+      <path d="M -32,-20 L -25,0 L -30,6 L -37,-14 Z" fill="#FFB6C1" />
+      
+      <!-- Camera Sunshield / Hood Top -->
+      <path d="M -35,-23 L 20,-32 L 23,-28 L -32,-19 Z" fill="#FF2E93" />
+      
+      <!-- Lens Glass -->
+      <ellipse cx="19" cy="-18" rx="4" ry="10" fill="#FF007F" stroke="#FFFFFF" stroke-width="1.5" />
+      
+      <!-- Camera Mount Stand -->
+      <path d="M -15,-6 L -15,10 L -6,10 L -6,-4 Z" fill="#E0E0E0" />
+      <rect x="-20" y="10" width="16" height="4" rx="2" fill="#FF2E93" />
+      
+      <!-- Sensor / Optical Scanning Ray -->
+      <line x1="24" y1="-18" x2="52" y2="-6" stroke="#FF69B4" stroke-width="2.5" stroke-dasharray="4,3" opacity="0.8" />
+    </g>
+
+    <!-- Automated Gate Bars (Lower Shield) -->
+    <g transform="translate(68, 128)">
+      <!-- Left & Right Gate Pillars -->
+      <rect x="0" y="0" width="6" height="42" rx="2" fill="url(#pinkGrad)" />
+      <rect x="78" y="0" width="6" height="42" rx="2" fill="url(#pinkGrad)" />
+      
+      <!-- Gate Grids / Pickets -->
+      <line x1="16" y1="6" x2="16" y2="40" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+      <line x1="29" y1="6" x2="29" y2="40" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+      <line x1="42" y1="6" x2="42" y2="40" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+      <line x1="55" y1="6" x2="55" y2="40" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+      <line x1="68" y1="6" x2="68" y2="40" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+      
+      <!-- Horizontal Crossbars -->
+      <line x1="2" y1="12" x2="82" y2="12" stroke="#FF007F" stroke-width="3.5" stroke-linecap="round" />
+      <line x1="2" y1="34" x2="82" y2="34" stroke="#FF007F" stroke-width="3.5" stroke-linecap="round" />
+    </g>
+  </g>
+
+  </svg>
